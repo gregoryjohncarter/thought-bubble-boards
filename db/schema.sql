@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS tbb_db;
+
+CREATE DATABASE tbb_db;
