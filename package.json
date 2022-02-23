@@ -1,12 +1,31 @@
 {
-    "dependencies": {
-        "bcrypt": "^5.0.1",
-        "connect-session-sequelize": "^7.1.2",
-        "dotenv": "^16.0.0",
-        "express": "^4.17.3",
-        "express-handlebars": "^6.0.2",
-        "express-session": "^1.17.2",
-        "mysql2": "^2.3.3",
-        "sequelize": "^6.16.2"
-    }
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "connect-session-sequelize": "^7.1.2",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "express-handlebars": "^6.0.2",
+    "express-session": "^1.17.2",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.16.2"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "thought-bubble-boards",
+  "description": "## Usage This application enables the user to browse and create blog posts by using Sequelize for a MySQL2 DB / ORM  and Heroku for a deployed server host (or NPM Express locally) to provide the service. Visitors can view posts without any authentication but must sign up and log in to create posts. Logged in users can also leave comments on posts as well as edit or delete posts they have created themselves.",
+  "version": "1.0.0",
+  "main": "server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gregoryjohncarter/thought-bubble-boards.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gregoryjohncarter/thought-bubble-boards/issues"
+  },
+  "homepage": "https://github.com/gregoryjohncarter/thought-bubble-boards#readme"
 }
