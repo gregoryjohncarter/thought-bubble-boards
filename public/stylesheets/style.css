@@ -1,0 +1,89 @@
+.disableClick {
+    pointer-events: none;
+}
+
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+    border: 7px solid grey;
+    box-shadow: -2px 2px 2px #6e6e6e;
+}
+
+.topnav span {
+    color: whitesmoke;
+    font-size: 3.1rem;
+}
+
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    font-size: 17px;
+}
+
+.topnav i {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding-top: 4px;
+    margin-right: 4px;
+    font-size: 25px;
+    color: rgb(165, 224, 207)
+}
+
+.third1 i {
+    font-size: 35px;
+    line-height: 25px;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+  
+
+.topnav a.active {
+    background-color: #3d9dd4;
+    color: white;
+    font-family: 'Antic Didone', serif;
+    font-size: 38px;
+}
+
+.topnav a.activee, .topnav a.inactive {
+    float: right;
+    font-family: 'Archivo Narrow', sans-serif;
+    font-size: 15px;
+}
+
+.flex {
+    flex-direction: row;
+    flex: 1 50%;
+}
+
+.third1 {
+    font-size: 30px;
+    float: left;
+    flex: 1;
+}
+
+.fourth1 {
+    font-size: 30px;
+    float: right;
+    flex: 1;
+}
+
+.third2 {
+    font-size: 30px;
+    float: right;
+    flex: 1;
+}
+
+.fourth2 {
+    font-size: 30px;
+    float: left;
+    flex: 1;
+}
