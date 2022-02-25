@@ -8,34 +8,36 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Antic+Didone&family=Archivo+Narrow&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Antic+Didone&family=Archivo+Narrow&family=DM+Sans&display=swap" rel="stylesheet">  
         <link rel="stylesheet" href="/stylesheets/style.css">
     </head>
 <body>
-    <div class="">
+    <div class="container">
         <header>
-            <div class="topnav">
-                <div class="flex">
-                    <div class="third1">
-                        <a href="#" class="active disableClick"><i class="small material-icons">chat</i>Thought Bubble Boards</a>
+            <div class="row">
+                <div class="topnav col s12">
+                    <div class="flex">
+                        <div class="third1">
+                            <a href="#" class="active disableClick"><i class="small material-icons">chat</i>Thought Bubble Boards</a>
+                        </div>
+                        <div class="fourth1">
+                            <span>&#123;&#123;&nbsp;&nbsp;</span>
+                        </div>
                     </div>
-                    <div class="fourth1">
-                        <span>&#123;&#123;&nbsp;&nbsp;</span>
-                    </div>
-                </div>
-                <div class="flex">
-                    <div class="third2">
-                        <a href="/" class="activee"><i class="small material-icons">public</i>Home</a>
-                            {{#if loggedIn}}
-                        <a href="/dashboard" class="activee"><i class="small material-icons">widgets</i>Dashboard</a>
-                        <a href="#" id="logout" class="activee"><i class="small material-icons">account_circle</i>Logout</button>
-                            {{else}}
-                        <a href="#" class="inactive disableClick"><i class="small material-icons">widgets</i>Dashboard</p>
-                        <a href="/login" class="activee"><i class="small material-icons">account_circle</i>Login</a>
-                            {{/if}}
-                    </div>
-                    <div class="fourth2">
-                        <span>&nbsp;&nbsp;&#125;&#125;</span>
+                    <div class="flex">
+                        <div class="third2">
+                            <a href="/" class="activee"><i class="small material-icons">public</i>Home</a>
+                                {{#if loggedIn}}
+                            <a href="/dashboard" class="activee"><i class="small material-icons">widgets</i>Dashboard</a>
+                            <a href="#" id="logout" class="activee"><i class="small material-icons">account_circle</i>Logout</button>
+                                {{else}}
+                            <a href="#" class="inactive disableClick"><i class="small material-icons">widgets</i>Dashboard</p>
+                            <a href="/login" class="activee"><i class="small material-icons">account_circle</i>Login</a>
+                                {{/if}}
+                        </div>
+                        <div class="fourth2">
+                            <span>&nbsp;&nbsp;&#125;&#125;</span>
+                        </div>
                     </div>
                 </div>
             </div>

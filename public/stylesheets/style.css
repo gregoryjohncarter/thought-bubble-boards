@@ -1,5 +1,20 @@
+/* Homepage / Navbar CSS */
+
 .disableClick {
     pointer-events: none;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #D9AFD9;
+    background-image: linear-gradient(0deg, #9fd4ab -55%,  #a6c5d6 95%);
 }
 
 .topnav {
@@ -8,13 +23,15 @@
     display: flex;
     flex-direction: column;
     border-radius: 25px;
-    border: 7px solid grey;
-    box-shadow: -2px 2px 2px #6e6e6e;
+    border: 7px solid #acacac;
+    margin-bottom: 25px;
+    margin-top: 25px;
 }
 
 .topnav span {
     color: whitesmoke;
     font-size: 3.1rem;
+    line-height: 4.1rem;
 }
 
 .topnav a {
@@ -50,40 +67,108 @@
     background-color: #3d9dd4;
     color: white;
     font-family: 'Antic Didone', serif;
-    font-size: 38px;
+    font-size: 25px;
 }
 
 .topnav a.activee, .topnav a.inactive {
     float: right;
     font-family: 'Archivo Narrow', sans-serif;
-    font-size: 15px;
 }
 
 .flex {
     flex-direction: row;
-    flex: 1 50%;
+    flex: 0;
 }
 
 .third1 {
-    font-size: 30px;
     float: left;
-    flex: 1;
+    flex: 0;
 }
 
 .fourth1 {
     font-size: 30px;
     float: right;
-    flex: 1;
+    flex: 0;
 }
 
 .third2 {
-    font-size: 30px;
     float: right;
-    flex: 1;
+    flex: 0;
 }
 
 .fourth2 {
     font-size: 30px;
     float: left;
-    flex: 1;
+    flex: 0;
+}
+
+main {
+    padding-bottom: 25px;
+}
+
+.row {
+    margin-bottom: 0px !important;
+}
+
+/* Login form CSS */ 
+
+form {
+    padding: 3rem;
+    background-color: #e6e6e6;
+    border: 7px solid #c2c2c2;
+    display: grid;
+    gap: 2rem;
+}
+
+form label {
+    font-family: 'Archivo Narrow', sans-serif;
+    font-size: 20px;
+}
+
+form h3 {
+    margin: 0px;
+    text-align: center;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 30px;
+}
+
+form button {
+    background: #3d9dd4;
+    border-radius: 999px;
+    box-shadow: #5E5DF0 0 10px 20px -10px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    opacity: 1;
+    outline: 0 solid transparent;
+    padding: 8px 18px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: fit-content;
+    word-break: break-word;
+    border: 0;
+}
+
+.login-form {
+    margin-bottom: 25px;
+}
+
+/* MEDIA QUERY - Tablets and smaller */ 
+@media screen and (max-width: 768px) {
+}
+
+/* MEDIA QUERY - Phones and smaller */ 
+@media screen and (max-width: 575px) {
+    .fourth1, .fourth2 {
+        display: none;
+    }
+
+    .flex {
+        margin: auto;
+    }
 }
