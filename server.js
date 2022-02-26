@@ -20,7 +20,9 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 // set up the session parameters to use cookies and pass an object with a session
 const sess = {
     secret: 'store the pass here Secretly',
-    cookie: {},
+    cookie: {
+        expires: 3600000
+    },
     resave: false,
     saveUninitialized: true,
     store: new SequelizeStore({
