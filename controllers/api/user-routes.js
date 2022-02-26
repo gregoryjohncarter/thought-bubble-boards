@@ -25,7 +25,7 @@ router.get('/:id', (req, res) => {
         include: [
             {
                 model: Post,
-                attributes: ['id', 'title', 'post_url', 'created_at']
+                attributes: ['id', 'title', 'content', 'created_at']
             },
             {
                 model: Comment,
@@ -34,12 +34,6 @@ router.get('/:id', (req, res) => {
                     model: Post,
                     attributes: ['title']
                 }
-            },
-            {
-                model: Post,
-                attributes: ['title'],
-                through: Vote,
-                as: 'voted_posts'
             }
         ]
     })
@@ -74,6 +68,7 @@ router.post('/', (req, res) => {
     })
 });
 
+// POST /api/users/login
 router.post('/login', (req, res) => {
     User.findOne({
         where: {
@@ -146,6 +141,7 @@ router.delete('/:id', (req, res) => {
     });
 });
 
+// POST /api/users/logout
 router.post('/logout', withAuth, (req, res) => {
     if (req.session.loggedIn) {
         req.session.destroy(() => {

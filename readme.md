@@ -8,3 +8,5 @@ Firstly, make sure you have Node.js and MySQL installed. Next, run 'npm install'
 ```
 bcrypt, connect-session-sequelize, dotenv, express, express-handlebars, express-session, mysql2, sequelize
 ```
+Type in 'mysql -u root -p' while navigated to the root directory to activate the MySQL shell, then type 'source db/schema.sql' to create the source database. Now you should be set up to type in 'npm start' to run the server locally and check out the features on ''https://localhost:3001" or use the Insomnia API client to input requests. Check the routes under the controllers directory for references on which routes are available, and note that a valid Login POST request must be made for those which require authentication. If you follow these guidelines you will be able to sign up and manipulate accounts and posts using Insomnia. 
+

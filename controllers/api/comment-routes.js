@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
 
+// api/comments 
 router.get('/', (req, res) => {
     Comment.findAll()
     .then(dbCommentData => res.json(dbCommentData))
@@ -11,6 +12,7 @@ router.get('/', (req, res) => {
     });
 });
 
+// api/comments 
 router.post('/', withAuth, (req, res) => {
     // check the session
     if (req.session) {
@@ -28,6 +30,7 @@ router.post('/', withAuth, (req, res) => {
     }
 });
 
+// api/comments/:id
 router.delete('/:id', withAuth, (req, res) => {
     Comment.destroy({
         where: {
