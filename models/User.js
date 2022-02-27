@@ -21,11 +21,11 @@ User.init(
             autoIncrement: true
         },
         username: {
-            type: DataTypes.STRING,
-            allowNull: false
+            type: DataTypes.STRING(25),
+            allowNull: false,
         },
         email: {
-            type: DataTypes.STRING,
+            type: DataTypes.STRING(50),
             allowNull: false,
             // there cannot be any duplicate email values in this table
             unique: true,
@@ -35,7 +35,7 @@ User.init(
             }
         },
         password: {
-            type: DataTypes.STRING,
+            type: DataTypes.STRING(100),
             allowNull: false,
             validate: {
                 // this means the password must be at least four characters long

@@ -199,6 +199,25 @@ form button {
     resize: none;
 }
 
+.card .card-content {
+    padding: 24px;
+    padding-bottom: 0px;
+}
+
+.comment {
+    padding: 10px
+}
+
+.user-info {
+    margin-bottom: 6px;
+    text-decoration: underline;
+}
+
+.comment-text {
+    line-height: 19px;
+    color: grey;
+}
+
 /* Homepage post list */
 
 .post {
@@ -207,6 +226,7 @@ form button {
 
 .preserve {
     white-space: pre-wrap;
+    line-height: 19px;
 }
 
 .secondary-post {
