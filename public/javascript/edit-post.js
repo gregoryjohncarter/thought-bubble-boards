@@ -7,21 +7,26 @@ async function editFormHandler(event) {
     ];
     const content = document.querySelector('textarea[id="post-content"]').value;
 
-    const response = await fetch(`/api/posts/${id}`, {
-        method: 'PUT',
-        body: JSON.stringify({
-                title,
-                content
-        }),
-        headers: {
-                'Content-Type': 'application/json'
+    if (content && title) {
+        const response = await fetch(`/api/posts/${id}`, {
+            method: 'PUT',
+            body: JSON.stringify({
+                    title,
+                    content
+            }),
+            headers: {
+                    'Content-Type': 'application/json'
+            }
+        });
+    
+        if (response.ok) {
+            document.location.replace('/dashboard/');
+        } else {
+            alert(response.statusText);
         }
-    });
-  
-    if (response.ok) {
-        document.location.replace('/dashboard/');
     } else {
-        alert(response.statusText);
+        alert("You must enter a title and content!");
+        return;
     }
 }
   

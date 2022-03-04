@@ -24,6 +24,9 @@ async function commentFormHandler(event) {
         } else {
             alert(response.statusText);
         }
+    } else {
+        alert("You must enter a comment!");
+        return;
     }
 }
   

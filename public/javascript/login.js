@@ -4,22 +4,35 @@ async function signupFormHandler(event) {
     const username = document.querySelector('#username-sign-up').value.trim();
     const email = document.querySelector('#email-sign-up').value.trim();
     const password = document.querySelector('#password-sign-up').value.trim();
-  
+
+    const validateEmail = (email) => {
+        return String(email)
+          .toLowerCase()
+          .match(
+            /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+          );
+    };
+
     if (username && email && password) {
-        const response = await fetch('/api/users', {
-            method: 'post',
-            body: JSON.stringify({
-                username,
-                email,
-                password
-            }),
-            headers: { 'Content-Type': 'application/json' }
-        });
-        // check the response status
-        if (response.ok) {
-            console.log('success');
+        if (password.length < 4 || !validateEmail(email)) {
+            alert("Email must be valid and password must be at least four characters long.");
+            return;
         } else {
-            alert(response.statusText);
+            const response = await fetch('/api/users', {
+                method: 'post',
+                body: JSON.stringify({
+                    username,
+                    email,
+                    password
+                }),
+                headers: { 'Content-Type': 'application/json' }
+            });
+            // check the response status
+            if (response.ok) {
+                console.log('success');
+            } else {
+                alert(response.statusText);
+            }
         }
     }
 }
@@ -45,7 +58,7 @@ async function loginFormHandler(event) {
         if (response.ok) {
             document.location.replace('/dashboard');
         } else {
-            alert(response.statusText);
+            alert(response.statusText + " / User not registered / Incorrect Login");
         }
     }
 }
